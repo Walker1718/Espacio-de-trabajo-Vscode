@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*Route::get('/', function () {
+    return view('home');
+});*/
+
+Route::view('/','home')->name('home');
+Route::view('contactos','contact')->name('contact');
+
+
+Route::get('/asd', 'AsdController@index');
